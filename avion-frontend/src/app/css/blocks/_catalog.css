@@ -1,0 +1,55 @@
+.catalog {
+  padding-bottom: 36px;
+}
+
+.catalog__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 47px;
+}
+
+.catalog__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+}
+
+.catalog__btns {
+  padding: 36px 0;
+  background: var(--light-grey);
+}
+
+.catalog__btn {
+  font-weight: 400;
+  font-size: 16px;
+  color: #726e8d;
+  text-decoration: none;
+  transition: var(--main-trs);
+  
+}
+
+.catalog__btn:focus {
+  outline: none;
+}
+
+.catalog__btn:focus-visible {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}
+
+.mix {
+  width: 305px;
+  height: 462px;
+}
+
+.mixitup-control-active {
+  color: black;
+}
+
+
+.catalog__header {
+  position: absolute;
+  z-index: -10;
+
+}
