@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { styled } from '@mui/material';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { HEADER_SETTINGS, LINKS } from '../../constants/links';
 import { logout } from '../../../pages/users/usersThunks';
@@ -29,6 +29,7 @@ const Link = styled(NavLink)({
 const Header = () => {
   const user = useAppSelector(selectUser);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
   );
@@ -53,6 +54,7 @@ const Header = () => {
 
   const onLogout = () => {
     dispatch(logout());
+    navigate('/login');
   };
 
   return (
